@@ -1,4 +1,4 @@
-# C4E.C-Cplusplus <img src="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" width="25">
+# c4E.C-Cplusplus <img src="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" width="25">
 > **_Portfolio for programs created during Coursera's Coding for Everyone: C and C++ Specialization_**
 
 <!--- Description ---> 

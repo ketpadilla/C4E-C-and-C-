@@ -1,5 +1,5 @@
-# c4E.C-Cplusplus <img src="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" width="25">
-> **_Portfolio for programs created during Coursera's Coding for Everyone: C and C++ Specialization_**
+# CPA.Cplusplus <img src="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" width="25">
+> **_Portfolio for programs created during Cisco's CPA - Programming Essentials in C++_**
 
 <!--- Description ---> 
 ...
@@ -9,8 +9,6 @@
 <!--- Development ---> 
 ### _Made with:_ <img src="https://img.icons8.com/ios/250/FFFFFF/source-code.png" width="25" align="left">
 <div>
-  <!--- C ---> 
- 	<img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white">
   <!--- C++ ---> 
  	<img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c++&logoColor=white">
 </div>

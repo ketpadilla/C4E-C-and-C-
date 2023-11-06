@@ -163,3 +163,113 @@
 */ 
 
 // * Flow Control (1.6.1.1)
+/*
+    ! Logical Operators
+    * returns a boolean value (true or false)
+        • == - equal to
+        • != - not equal to
+        • > - greater than
+        • < - less than
+        • >= - greater than or equal to
+        • <= - less than or equal to
+    
+    Storing boolean values:
+        • bool - stores true or false
+        • true - 1
+        • false - 0
+    ! template
+        bool variable_name = boolean_value;
+
+    Conditional Instruction/Statement - controls the flow of a program
+        • if-else
+        • switch
+        • while
+        • do-while
+        • for
+    
+    Compound Statement (Block) - a group of statements enclosed in curly braces
+        • e.g., 
+        {
+            statement1;
+            statement2;
+            ...
+        }
+
+    Conditional Operator (?:) - ternary operator; shorthand for if-else statement
+        e.g.:
+        if-else:
+            if (condition) {
+                statement1;
+            } else {
+                statement2;
+            }
+        ! ternary:
+            (condition) ? statement1 : statement2; 
+*/
+
+// * Input and Output
+/*
+
+    !#include <iostream> - header with input/output stream declarations
+
+    * Input - data received by a program
+        • cin - standard input stream (e.g., cin >> variable_name;)
+        • extraction operator (>>) - extracts data from a stream
+
+    * Output - data sent by a program
+        • cout - standard output stream (e.g., cout << "Hello World!";)
+        • insertion operator (<<) - inserts data into a stream
+    
+    Converting - changing the type of a value (e.g., static_cast<type>(value);)
+    
+    Tranferring - moving data from one stream to another (e.g., cin >> variable_name;)
+
+    ! Manipulator - entity that tells the steam to immdeiately change the data into the desired form
+        e.g., refer to manipulator() function
+        * technically a basefield - changes the base used to display integers
+            • dec - decimal (default) (n = 10)
+            • hex - hexadecimal (n = 16)
+            • oct - octal (n = 8)
+        * setbase(n) - sets the base to n
+    
+    !#include <iomanip> - header with input/output manipulator declarations
+
+    endl or \n - manipulator that inserts a new line and flushes the stream
+
+    !include <cmath> - header with math functions
+        • sqrtf(x) - square root of x
+*/
+
+// * Sample programs:
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int manipulator() {
+    int byte = 255;
+    cout << "Byte in hex:" << hex << byte << endl;
+    return 0;
+}
+
+int square() {
+    float n;
+    cout << "Enter a number: ";
+    cin >> n;
+    cout << "Square of " << n << " is " << pow(n, 2) << endl;
+    return 0;
+}
+
+int operators() {
+    int i = 10, j = 3;
+    int k = (i % j * i / 3) / (j % i - j / i);
+    cout << k << endl;
+    return 0;
+}
+
+int main() {
+    manipulator();
+    square();
+    operators();
+
+    return 0;
+}

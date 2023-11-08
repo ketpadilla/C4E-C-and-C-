@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    float k = 1.0 / 4.0;
-    int i = k;
+    // M1 Test: Focused on value of literals (E, hex, oct, dec)
+    int i;
     cout << i << endl;
 }

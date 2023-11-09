@@ -136,7 +136,7 @@
 #include <iostream>
 using namespace std;
 
-int main() 
+int operators() 
 {
 	int w_sign = -8;
 	unsigned wo_sign = 4;
@@ -159,6 +159,8 @@ int main()
 	/* equivalent to multiplication by 2 –> var_u == 2 */
 	var_u = wo_sign << 1;
 	cout << var_u << endl;
+
+    return 0;
 }
 
 // * Switch
@@ -206,7 +208,72 @@ int main()
     initialization
         vector<type> name = {element1, element2, element3, ...};
         int var[] = {1, 2, 3, 4, 5};
-
-    !! 2.7.1.2 Vectors of vectors: multdimensional arrays
-
 */
+
+// * Arrays 
+/* 
+    a vector with more than one dimension
+    a vector whose elements are vectors
+
+    ! Matrix
+    a 2D array
+  
+    ! Initailization
+        opt1: matrix(row, vector<type>(column));
+        opt2: name(size, vector(size));
+        opt3: type name[size][size];
+    * name[row][column]
+*/
+
+// * Strings
+/*
+    stores a sequence of characters (char)
+    use double quotes ("") to declare a string literal
+
+    ! #include<string>
+    - allows for string manipulation
+*/
+
+// * Structures
+/*
+    a collection of variables of different types
+
+    ! Field 
+    - a variable in a structure
+
+    ! Declaration
+        struct name {
+            type1 field1;
+            type2 field2;
+            ...
+        };
+
+    two structures can have the same field names
+
+    * members are public by default
+    * class is a structure with private members by default
+
+
+*/ // ! Sample Program
+#include <string>
+struct Student {
+    int id;
+    string name;
+    double gpa;
+};
+
+// Main
+int main() {
+    operators();
+    
+    // Structure
+    Student s1; // declare a variable of type Student
+    s1.id = 1; // assign values to the fields
+    s1.name = "John";
+    s1.gpa = 3.5;
+    cout << s1.id << s1.name << s1.gpa << endl; // print the values of the fields
+
+    Student s2 = {2, "Jane", 3.8}; // declare and initialize a variable of type Student
+    cout << s2.name << endl; // print the values of the fields
+    return 0;
+}

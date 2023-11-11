@@ -128,6 +128,129 @@
 
     * non-void type functions must have at least one return
     * void type functions may optionally have a return
+    
+    ! Local Variables
+        - declared and only accessible within a function
+    ! Global Variables
+        - declared outside of a function; accessible to all functions
+
+    Function can change the value of the arguments passed to it by reference:
+        ! use the reference operator (&) in the function definition
+        e.g., 
+            void swap(int &a, int &b) {
+                int temp = a;
+                a = b;
+                b = temp;
+            }
+
+            int main() {
+                int x = 5, y = 10;
+                swap(x, y);
+                cout << x << " " << y << endl; // prints 10 5
+                return 0;
+            }
+        
+        ! pointers can also be used to change the value of the arguments passed to it
+        e.g.,
+            void swap(int *a, int *b) {
+                int temp = *a;
+                *a = *b;
+                *b = temp;
+            }
+
+            int main() {
+                int x = 5, y = 10;
+                swap(&x, &y);
+                cout << x << " " << y << endl; // prints 10 5
+                return 0;
+            }
+
+    Default Parameters - parameters that are given a default value
+        ! must be placed at the end of the parameter list
+        e.g.,
+            void function(int a, int b = 5) {
+                ...
+            }
+
+            int main() {
+                function(10); // b = 5
+                function(10, 20); // b = 20
+                return 0;
+            }
+    
+    ! Function inlining - process of compiling function invocations, creating unline functions
+        * use the keyword "inline" before the function declaration
+        e.g.,
+            inline int function(int a, int b) {
+                ...
+            }
+
+            int main() {
+                function(10, 20);
+                return 0;
+            }
+        
+        advantage: faster execution time
+        disadvantage: larger executable file
+
+        cannot be used for functions with return values, loops, switch statements, recursion, and static variables
+    
+    ! Overloaded functions - functions with the same name but different parameters
+        must be clearly distinguishable to the compiler (i.e., different number of parameters or different types of parameters)
+        e.g., 
+            int function(int a, int b) {
+                ...
+            }
+
+            int function(int a, int b, int c) {
+                ...
+            }
+
+            int main() {
+                function(10, 20); // calls the first function
+                function(10, 20, 30); // calls the second function
+                return 0;
+            }
+    
+    !! Tenary Conditional Operator (?:) - operator that takes three operands
+        ! template
+            condition ? expression1 : expression2
+
+        if condition is true, expression1 is evaluated
+        if condition is false, expression2 is evaluated
+
+        e.g.,
+            int x = 5, y = 10;
+            int z = (x > y) ? x : y; // z = 10
+
+            int x = 5, y = 10;
+            int z = (x < y) ? x : y; // z = 5
 */
 
-// ! 3.5.1.1 Transfoerring data to and from functions
+// * SORTING
+// algorithm that arranges a list of items in a specific order
+/*
+    e.g.,
+        ! Bubble Sort
+            * repeatedly compared adjacent elements and swaps them if they are in the wrong order
+            notation: 
+                best case: O(n)
+                worst case: O(n^2)
+                average case: O(n^2)    
+*/
+
+// * VOID
+// indicates that a function does not return a value
+
+// * MEMORY ON DEMAND
+/*
+    new - allocates memory for a variable
+    delete - deallocates memory for a variable (must be used with new)
+
+    e.g., 
+        int *ptr = new int;
+        *ptr = 5;
+        cout << *ptr << endl; // prints 5
+        delete ptr;
+        cout << *ptr << endl; // prints garbage value
+*/

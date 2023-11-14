@@ -6,7 +6,11 @@ using namespace std;
 int main() {
     // M1 Test: Focused on value of literals (E, hex, oct, dec)
     // M2 Test: Focused on output of programs (conditionals, loops, & strucutres)
-    // M# Test: Focused on output of programs (functions, arrays, & pointers)
- 
+    // M3 Test: Focused on output of programs (functions, arrays, & pointers)
+    // M4 Test: Focused on output of programs (namespaces, strings, arrays, & pointers)
+
+    return 0;
+
 }
+
 
